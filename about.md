@@ -1,26 +1,26 @@
 ---
 layout: page
-title: About
+title: 关于
 permalink: /about/
 ---
 
-## Base
+## 基本信息
 
 Name: brandon
 Email: brandonfeihu@gmail.com
 Address: Beijing China
 
-## Language
+## 开发语言
 
 - Java
 - JavaScript
 
-## DB
+## 数据库
 
 - Mysql
 - Postgresql
 
-## Tools
+## 工具
 
 - IntelliJ IDEA
 - Eclipse
@@ -29,6 +29,6 @@ Address: Beijing China
 - XMind
 - Typora
 
-## Other
+## 其他
 
 - AWS
