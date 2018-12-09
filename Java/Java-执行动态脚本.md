@@ -79,7 +79,7 @@ Luaj是基于lua 5.2.x版本的lua解释器，其中考虑了以下目标：
         System.out.printf("lua：%d ms\n", end - start);
 ```
 
-## 平均执行时长
+### 平均执行时长
 `lua`：900 ms
 `javascript`：60000 ms
 lua脚本的执行效率大大高于js脚本的执行效率。

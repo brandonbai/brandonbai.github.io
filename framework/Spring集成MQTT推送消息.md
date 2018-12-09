@@ -2,7 +2,7 @@
 
 Spring Integration基于[Eclipse Paho MQTT客户端](https://www.eclipse.org/paho/)库提供了支持MQTT协议的入站和出站通道适配器。但是使用起来不是很灵活(有可能是没有深入理解😂)。在参考了[这篇文章](https://blog.csdn.net/zhang89xiao/article/details/51871973)后有了如下实现：
 
-####1. maven依赖
+#### 1. maven依赖
 
 ```
 	<dependency>
@@ -22,7 +22,7 @@ Spring Integration基于[Eclipse Paho MQTT客户端](https://www.eclipse.org/pah
     </dependency>
 ```
 
-####2. 配置文件
+#### 2. 配置文件
 
 * applicationContext.xml
 
@@ -77,7 +77,7 @@ mqtt.clientId=mqttPubClient
 mqtt.defaultQos=1
 
 ```
-####3. 调用
+#### 3. 调用
 
 ```
 	@Resource  

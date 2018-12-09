@@ -2,45 +2,45 @@
 
 * * *
 
-## 设计工具
+### 设计工具
 
-### [Gliffy](https://link.jianshu.com?t=https://www.gliffy.com/)
+#### [Gliffy](https://link.jianshu.com?t=https://www.gliffy.com/)
 
 Gliffy 是一个基于Web的在线作图应用，它可以帮助用户创建流程图、组织结构图、平面图、业务流程、网络图、技术图、线框图等等。Gliffy的基础版本免费。不过其在线制作的思维导图是公开的，高级版本有设置隐私权的权力。用户可以将其可以嵌入博客，办公室应用软件中，有很好的兼容性。通过Gliffy编辑的流程图图片可输出SVG、GPEG格式。本人用的Chrome插件版，主要用其画流程图。
 ![](https://upload-images.jianshu.io/upload_images/5151732-15eeecf9cb946b68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-### [XMind]()
+#### [XMind]()
 XMind 是一款采用Java语言开发的实用的思维导图软件。XMind不仅可以绘制思维导图，还能绘制鱼骨图、二维图、树形图、逻辑图、组织结构图。并且，可以方便地从这些展示形式之间进行转换。另外，其可以导入MindManager、FreeMind数据文件。灵活的定制节点外观、插入图标，丰富的样式和主题以及多种格式的导出功能都是其显著的特点。
 ![](https://upload-images.jianshu.io/upload_images/5151732-f5ea66092655cb13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * * *
 
-## 开发工具
+### 开发工具
 
-### [Postman]()
+#### [Postman]()
 Postman是一款强大的API接口测试工具。其功能十分强大到如果不系统学习的话，每次触发一个新功能都有一种发现新大陆的感觉。
 
 ![](https://upload-images.jianshu.io/upload_images/5151732-7223c428277a6e42.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-### [Sublime Text](https://link.jianshu.com/?t=http://www.sublimetext.com/)
+#### [Sublime Text](https://link.jianshu.com/?t=http://www.sublimetext.com/)
 Sublime是一款功能强大的文本编辑器，丰富的插件支持是其一大特性。习惯了免费的我，还是喜欢用Sublime Text2。
 ![](https://upload-images.jianshu.io/upload_images/5151732-64552ee468a83b95.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-### [Sequel Pro]()
+#### [Sequel Pro]()
 Sequel Pro是一款快速，易用的Mac数据库管理应用程序，用于处理MySQL数据库，使用起来十分简便。但是其只支持Mysql，对于常常遇到postgresql项目的我来说，不得不去面对navicat。
 ![](https://upload-images.jianshu.io/upload_images/5151732-e94751d1598337a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * * *
 
-## 其他
+### 其他
 
-### [Typora]()
+#### [Typora]()
 
 Typora 是一个功能强大且使用简单的所见即所得的 MarkDown 编辑器。它删除了预览窗口，模式切换器，源代码的语法符号以及所有其他不必要的干扰。 将它们替换为真实的实时预览功能，以帮助用户集中内容本身。使用它的另一个原因是其导出 PDF 文件是非常方便的。
 
 ![image](http://upload-images.jianshu.io/upload_images/5151732-42b4612981b625a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-### [Dash]()
+#### [Dash]()
 Dash是一个离线的API文档浏览器，能够快速地从文档库中搜索出相应的结果。离线的好处是在网络状况不好的情况下也可以高效地开发。我常常在上面搜索python和postgresql的一些文档。
 ![](https://upload-images.jianshu.io/upload_images/5151732-99a5c69535f41e88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

@@ -1,11 +1,11 @@
 > UEditor是由百度开发的富文本web编辑器。其后端jsp代码实现的文件保存/读取路径受限于传统文件系统且只能在应用的webapp目录下, 故作出修改。但是暂没有使用官方后端代码，且只实现了图片上传下载功能。
 
-## 1. 下载
+### 1. 下载
 * 下载地址：[http://ueditor.baidu.com/website/download.html](http://ueditor.baidu.com/website/download.html), 下载其中的`jsp版本`
 * 文件解压后目录结构如下所示
 ![目录结构.png](https://upload-images.jianshu.io/upload_images/5151732-3fe80250408e97b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 2. 搭建项目
+### 2. 搭建项目
 
 * 2.1. 新建一个maven项目
 
@@ -125,7 +125,7 @@
 
 ![config.png](https://upload-images.jianshu.io/upload_images/5151732-823034d4321728d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 3. 前端配置
+### 3. 前端配置
 
 修改2.4图中的`ueditor.config.js`的服务器请求路径
 
@@ -134,7 +134,7 @@
  33       , serverUrl: URL + "./ueConvert"
 ```
 
-## 4. 后端实现
+### 4. 后端实现
 
 
 * UEditorController.java
@@ -283,7 +283,7 @@ public class UEditorController {
 }
 ```
 
-## 5.演示
+### 5.演示
 
 ![demo.gif](https://upload-images.jianshu.io/upload_images/5151732-58e9252e486d799b.gif?imageMogr2/auto-orient/strip)
 
