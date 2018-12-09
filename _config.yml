@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 飞虎兄的博客
-email: jifeihu@foxmail.com
+email: brandonfeihu@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   专注于 Java 开发、AWS 服务、IoT 服务
 baseurl: "" # the subpath of your site, e.g. /blog
