@@ -7,7 +7,9 @@ permalink: /about/
 ## 基本信息
 
 Name: brandon
+
 Email: brandonfeihu@gmail.com
+
 Address: Beijing China
 
 ## 开发语言
