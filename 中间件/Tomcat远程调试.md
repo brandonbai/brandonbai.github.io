@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 > 通过在服务器Tomcat中进行简单配置即可在本地debug服务器上的代码。
 
 ###1. Tomcat配置

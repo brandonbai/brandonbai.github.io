@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 > (mqtt java客户端整合Spring的参看[这篇文章](https://www.jianshu.com/p/6b60858b7d44))
 
 Paho Java客户端是一个用Java编写的MQTT客户端库，用于开发在JVM或其他Java兼容平台（如Android）上运行的应用程序。

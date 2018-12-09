@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 > Eclipse Mosquitto是一个开源消息代理，实现了MQTT协议版本3.1和3.1.1。Mosquitto轻量，适用于低功耗单板计算机到完整服务器的所有设备。Mosquitto项目还提供了用于实现MQTT客户端的C库以及非常受欢迎的mosquitto_pub和mosquitto_sub命令行MQTT客户端。
 
 其他服务器代理实现:https://github.com/mqtt/mqtt.github.io/wiki/servers

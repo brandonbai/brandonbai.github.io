@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 >JSR 223中规范了在Java虚拟机上运行的脚本语言与Java程序之间的交互方式。JSR 233是JavaSE6的一部分，在Java表中API中的包是javax.script。 
 
 **下面根据实践来说一下调用动态语言脚本具体做什么：**
