@@ -1,5 +1,5 @@
 ---
-layout:default
+layout: default
 ---
 
 ## MQTT 概述
