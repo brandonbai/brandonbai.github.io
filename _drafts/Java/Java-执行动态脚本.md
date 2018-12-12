@@ -1,7 +1,3 @@
----
-layout: default
----
-
 >JSR 223中规范了在Java虚拟机上运行的脚本语言与Java程序之间的交互方式。JSR 233是JavaSE6的一部分，在Java表中API中的包是javax.script。 
 
 **下面根据实践来说一下调用动态语言脚本具体做什么：**
@@ -83,7 +79,7 @@ Luaj是基于lua 5.2.x版本的lua解释器，其中考虑了以下目标：
         System.out.printf("lua：%d ms\n", end - start);
 ```
 
-### 平均执行时长
+## 平均执行时长
 `lua`：900 ms
 `javascript`：60000 ms
 lua脚本的执行效率大大高于js脚本的执行效率。
