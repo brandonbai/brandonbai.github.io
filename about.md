@@ -4,9 +4,7 @@ title: 关于
 permalink: /about/
 ---
 
-## 基本信息
-
-Name: brandon
+## 信息
 
 Email: brandonfeihu@gmail.com
 
