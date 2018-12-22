@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring集成MQTT推送消息
+title: Spring 集成 MQTT 推送消息
 ---
 
 > (mqtt java客户端的使用参看[这篇文章](https://www.jianshu.com/p/65e1748a930c))
