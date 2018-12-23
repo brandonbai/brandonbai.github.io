@@ -10,7 +10,7 @@ Spring Integration基于[Eclipse Paho MQTT客户端](https://www.eclipse.org/pah
 ### 1. maven依赖
 
 ```
-	<dependency>
+    <dependency>
         <groupId>org.springframework.integration</groupId>
         <artifactId>spring-integration-core</artifactId>
         <version>4.3.9.RELEASE</version>
@@ -86,7 +86,7 @@ mqtt.defaultQos=1
 ### 3. 调用
 
 ```
-	@Resource  
+    @Resource  
     private MqttPahoMessageHandler mqttHandler;  
 	
 	@Override
@@ -94,16 +94,16 @@ mqtt.defaultQos=1
 		// 构建消息
 		Message<String> messages = MessageBuilder.withPayload(content).setHeader(MqttHeaders.TOPIC, topic).build();  
 		// 发送消息
-        mqttHandler.handleMessage(messages);
-	}
+                mqttHandler.handleMessage(messages);
+    }
 ```
 
 示例代码：[https://github.com/brandonbai/spring-mqtt-demo](https://github.com/brandonbai/spring-mqtt-demo)
 
 #### 链接
 
-*   项目网站：[https://www.eclipse.org/paho](https://www.eclipse.org/paho)
-*   Eclipse项目信息：[https://projects.eclipse.org/projects/iot.paho](https://projects.eclipse.org/projects/iot.paho)
-*   GitHub：[https://github.com/eclipse/paho.mqtt.java](https://github.com/eclipse/paho.mqtt.java)
-*   MQTT Java客户端的使用：[https://www.jianshu.com/p/65e1748a930c](https://www.jianshu.com/p/65e1748a930c)
+*  项目网站：[https://www.eclipse.org/paho](https://www.eclipse.org/paho)
+*  Eclipse项目信息：[https://projects.eclipse.org/projects/iot.paho](https://projects.eclipse.org/projects/iot.paho)
+*  GitHub：[https://github.com/eclipse/paho.mqtt.java](https://github.com/eclipse/paho.mqtt.java)
+*  MQTT Java客户端的使用：[https://www.jianshu.com/p/65e1748a930c](https://www.jianshu.com/p/65e1748a930c)
 *  MQTT服务端Mosquitto搭建：[https://www.jianshu.com/p/9e3cb7042a2e](https://www.jianshu.com/p/9e3cb7042a2e)
