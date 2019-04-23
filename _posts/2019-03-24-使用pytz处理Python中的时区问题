@@ -1,0 +1,105 @@
+---
+layout: post
+title: 使用 pytz 处理 Python 中的时区问题
+---
+
+## 介绍
+
+pytz将 [Olson tz](https://en.wikipedia.org/wiki/Tz_database) 数据库带入Python。该库允许使用Python 2.4或更高版本进行准确的跨平台时区计算。它还解决了夏令时结束时模糊时间的问题。几乎所有的 Olson 时区都得到了支持。
+
+## 安装
+
+pip安装
+
+```sh
+pip install pytz
+```
+## 示例和用法
+
+**本地化时间和日期算术**
+
+```sh
+>>> from datetime import datetime, timedelta
+>>> from pytz import timezone
+>>> import pytz
+>>> utc = pytz.utc
+>>> utc.zone
+'UTC'
+>>> beijing = timezone('Asia/Shanghai')
+>>> beijing.zone
+'Asia/Shanghai'
+>>> tokyo = timezone('Asia/Tokyo')
+>>> tokyo.zone
+'Asia/Tokyo'
+```
+
+该库支持两种构建本地化时间的方法。
+
+- 第一种是使用pytz库提供的 `localize()` 方法。这用于本地化一个没有时区信息的日期时间:
+
+```sh
+>>> fmt = '%Y-%m-%d %H:%M:%S %Z%z'
+>>> loc_dt = beijing.localize(datetime(2018, 10, 27, 6, 0, 0))
+>>> print(loc_dt.strftime(fmt))
+'2018-10-27 06:00:00 CST+0800'
+```
+- 第二种方法是使用标准 `astimezone()` 方法转换现有的本地化时间：
+
+```sh
+>>> jp_dt = loc_dt.astimezone(tokyo)
+>>> jp_dt.strftime(fmt)
+'2018-10-27 07:00:00 JST+0900'
+```
+
+处理时间的首选方法是始终以UTC工作，仅在生成输出以供人类读取时转换为本地时间:
+
+```sh
+>>> utc_dt = datetime(2018, 10, 27, 6, 0, 0, tzinfo=utc)
+>>> loc_dt = utc_dt.astimezone(beijing)
+>>> loc_dt.strftime(fmt)
+'2018-10-27 14:00:00 CST+0800'
+```
+此库还允许使用本地时间进行日期算术，例如计算北京和东京的时差：
+```sh
+>>> timestamp = datetime.utcnow()
+>>> dt_cn = beijing.localize(timestamp)
+>>> dt_jp =tokyo.localize(timestamp)
+>>> x = dt_cn - dt_jp
+>>> int(x.total_seconds()/3600)
+1
+```
+
+## 其他
+
+**UTC**
+
+'UTC'是[协调世界时](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)。它是格林威治标准时间（GMT）和世界时的各种定义的继承者，但不同。UTC现在是调节时钟和时间测量的全球标准。所有其他时区都是相对于UTC定义的，包括UTC + 0800等偏移量 - 从UTC添加或减去的小时数，以得出当地时间。UTC中没有夏令时，这使得它成为执行日期算术的有用时区，而不用担心夏令时转换，所在国家/地区更改时区或漫游多个时区的移动计算机造成的混乱和模糊。
+
+**夏令时**
+
+夏令时是在夏季推进时钟的做法，以便晚上的日光持续时间更长，同时牺牲正常的日出时间。通常，使用夏令时的区域会在接近开始的一小时前调整时钟，并在秋季将其向后调整到标准时间。
+
+例如，在10月的最后一个星期天早上的美国东部时区，发生以下顺序：
+
+- 01:00 EDT (东部夏令时) 发生
+- 1小时后，而不是凌晨2点，时钟再次返回1小时，再次发生01:00 EST(东部标准时间)
+
+```sh
+>>> utc_dt = datetime(2002, 10, 27, 6, 0, 0, tzinfo=utc)
+>>> eastern = timezone('US/Eastern')
+>>> loc_dt = utc_dt.astimezone(eastern)
+>>> before = loc_dt - timedelta(minutes=10)
+>>> before.strftime(fmt)
+'2002-10-27 00:50:00 EST-0500'
+>>> eastern.normalize(before).strftime(fmt)
+'2002-10-27 01:50:00 EDT-0400'
+>>> after = eastern.normalize(before + timedelta(minutes=20))
+>>> after.strftime(fmt)
+'2002-10-27 01:10:00 EST-0500'
+```
+事实上，01：00和02:00之间的每一个瞬间都会发生两次。
+
+## 链接
+
+- [pytz - World Timezone Definitions for Python](http://pytz.sourceforge.net/)
+- [Python中的时区处理](https://tech.glowing.com/cn/dealing-with-timezone-in-python/)
