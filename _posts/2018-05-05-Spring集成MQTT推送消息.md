@@ -98,7 +98,7 @@ mqtt.defaultQos=1
     }
 ```
 
-示例代码：[https://github.com/brandonbai/spring-mqtt-demo](https://github.com/brandonbai/mqtt-spring-boot/samples)
+示例代码：[https://github.com/brandonbai/spring-mqtt-demo](https://github.com/brandonbai/mqtt-spring-boot/tree/master/samples)
 
 #### 链接
 
