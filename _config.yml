@@ -1,44 +1,31 @@
-# Basic
-title: 飞虎兄
-subtitle: 个人站
-description: 欢迎来到我的个人站~
-avatarTitle: brandonbai
-avatarDesc: Java / IoT
-url: "https://jifeihu.xyz"
+title: Your awesome title
+author: GitHub User
+email: your-email@domain.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+show_excerpts: true # set to true to show excerpts on the homepage
 
-# Comment
-comment:
-    disqus: brandonbai
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+sass:
+  sass_dir: _sass
+plainwhite:
+  name: 飞虎兄
+  tagline: Developer
+  date_format: "%b %-d, %Y"
+  sitemap: true # set to true to generate sitemap.xml content
 
-# Social
-social:
-    weibo: 3929270633 
-    github: brandonbai
-    # twitter: 
-    mail: brandonbaifeihu@gmail.com
+  # generate social links in footer
+  social_links:
+    github:  brandonbai
+    linkedIn: in/飞虎-冀-316316171
+    rss: rss
 
-permalink: /:year/:month/:title/
-# Format
-highlighter: rouge
+header_pages:
+- about.md
 
-textColor: #FF0000
-
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: clear
-
-# The blog button should not be removed.
-blog_button:
-    title: 博客主页
-
-# Navigation buttons in the front page.s
-nav:
-    - {title: 所有文章, description: archive, url: '/archive'}   
-    - {title: 标签, description: tags, url: '/tags'}      
-    - {title: 关于我, description: about, url: '/about'}      
-    
-
-# Pagination
-gems: [jekyll-paginate,jekyll-sitemap]
-paginate: 20
-paginate_path: "page/:num/"
+# Build settings
+theme: plainwhite
 
