@@ -28,4 +28,5 @@ header_pages:
 
 # Build settings
 theme: plainwhite
+remote_theme: thelehhman/plainwhite-jekyll
 
