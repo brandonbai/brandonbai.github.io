@@ -4,7 +4,7 @@ title: SpringMVC 集成 UEditor
 categories: UEditor Spring
 ---
 
-> UEditor是由百度开发的富文本web编辑器。其后端jsp代码实现的文件保存/读取路径受限于传统文件系统且只能在应用的webapp目录下, 故作出修改。但是暂没有使用官方后端代码，且只实现了图片上传下载功能。
+UEditor是由百度开发的富文本web编辑器。其后端jsp代码实现的文件保存/读取路径受限于传统文件系统且只能在应用的webapp目录下, 故作出修改。但是暂没有使用官方后端代码，且只实现了图片上传下载功能。
 
 ## 1. 下载
 * 下载地址：[http://ueditor.baidu.com/website/download.html](http://ueditor.baidu.com/website/download.html), 下载其中的`jsp版本`
@@ -16,7 +16,8 @@ categories: UEditor Spring
 * 2.1. 新建一个maven项目
 
 * 2.2. pom依赖
-```
+
+```xml
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
@@ -82,7 +83,8 @@ categories: UEditor Spring
 ```
 
 * 2.3. spring-mvc.xml
-```
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
@@ -106,8 +108,10 @@ categories: UEditor Spring
 	<mvc:default-servlet-handler />
 </beans>
 ```
+
 * 2.4. applicationContext.xml
-```
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
@@ -123,7 +127,6 @@ categories: UEditor Spring
 </beans>
 ```
 
-
 * 2.5. 将`ueditor`下载解压后目录下图`目录结构.png`第1部分的代码拷贝到项目的`webapp`下，如下图所示：
 ![项目结构.jpg](https://upload-images.jianshu.io/upload_images/5151732-43155e95c9332da9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -135,7 +138,7 @@ categories: UEditor Spring
 
 修改2.4图中的`ueditor.config.js`的服务器请求路径
 
-```
+```js
  32      // 服务器统一请求接口路径
  33       , serverUrl: URL + "./ueConvert"
 ```
@@ -144,7 +147,8 @@ categories: UEditor Spring
 
 
 * UEditorController.java
-```
+
+```java
 package com.github.brandonbai.springmvcueditordemo.controller;
 
 import java.io.BufferedReader;

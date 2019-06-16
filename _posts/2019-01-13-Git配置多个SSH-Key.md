@@ -4,11 +4,10 @@ title: Git 配置多个 SSH Key
 categories: SSH Git
 ---
 
-> 以前使用 git 经常遇到这样的问题：
->> 项目A 位于 github ，使用 ssh key A 提交代码
->> 项目B 位于 gitlab ，使用 ssh key B 提交代码
->
-> 这样本地就存储了两个私钥，在来回切换项目并提交代码的时候怎么办呢？
+以前使用 git 经常遇到这样的问题：
+项目A 位于 github ，使用 ssh key A 提交代码；
+项目B 位于 gitlab ，使用 ssh key B 提交代码。
+这样本地就存储了两个私钥，在来回切换项目并提交代码的时候怎么办呢？
 
 ## 使用 ssh config 映射文件
 在 `~/.ssh/` 文件下创建 `config` 文件，内容如下：
@@ -65,7 +64,6 @@ IdentityFile|ssh 私钥 路径
   User git
   IdentityFile /Users/brandon/.ssh/id_rsa_gitlab
   ```
-
 ## 验证 ssh key
 使用如下命令可以验证配置是否正确:
 
