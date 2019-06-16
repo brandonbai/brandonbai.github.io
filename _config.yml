@@ -23,6 +23,6 @@ header_pages:
 - about.md
 
 # Build settings
-theme: plainwhite
+# theme: plainwhite
 remote_theme: thelehhman/plainwhite-jekyll
 
