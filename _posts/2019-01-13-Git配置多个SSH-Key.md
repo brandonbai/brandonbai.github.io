@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git 配置多个 SSH Key
+categories: SSH Git
 ---
 
 > 以前使用 git 经常遇到这样的问题：
